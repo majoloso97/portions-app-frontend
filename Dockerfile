@@ -16,7 +16,7 @@ EXPOSE 3000
 
 #run npm according to env
 CMD if [ "$NODE_ENV" = "production" ]; then \
-  npm run build & npm start; \
+  npm run build && npm run start; \
 else \
   npm run dev; \
 fi
