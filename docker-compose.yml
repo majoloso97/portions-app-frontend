@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  portions-app-frontend:
+    image: portions-app-frontend
+    container_name: portions-app-frontend
+    environment:
+      - NODE_ENV=${NODE_ENV}
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000
