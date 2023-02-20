@@ -14,7 +14,7 @@ COPY . .
 #set port to open
 EXPOSE 3000
 
-#run npm according to env
+#run npm according to env in bash script
 CMD if [ "$NODE_ENV" = "production" ]; then \
   npm run build && npm run start; \
 else \
